@@ -129,7 +129,7 @@ eval("\n\nvar isOldIE = function isOldIE() {\n  var memo;\n  return function mem
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Post; });\nclass Post {\r\n    constructor(title) {\r\n        this.title = title;\r\n        this.data = new Date();\r\n    }\r\n\r\n    toString() {\r\n        JSON.stringify({\r\n            title: this.title,\r\n            date: this.data.toJSON(),\r\n        })\r\n    }\r\n\r\n    get upperCaseTitle() {\r\n        return this.title.toUpperCase()\r\n    }\r\n}\r\n\n\n//# sourceURL=webpack:///./Post.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"default\", function() { return Post; });\nclass Post {\r\n    constructor(title, img) {\r\n        this.title = title;\r\n        this.img = img;\r\n        this.data = new Date();\r\n    }\r\n\r\n    toString() {\r\n        JSON.stringify({\r\n            title: this.title,\r\n            date: this.data.toJSON(),\r\n            img: this.img\r\n        })\r\n    }\r\n\r\n    get upperCaseTitle() {\r\n        return this.title.toUpperCase()\r\n    }\r\n}\r\n\n\n//# sourceURL=webpack:///./Post.js?");
 
 /***/ }),
 
@@ -144,6 +144,18 @@ eval("module.exports = JSON.parse(\"{\\\"title\\\":\\\"New JSON title\\\"}\");\n
 
 /***/ }),
 
+/***/ "./assets/wp.png":
+/*!***********************!*\
+  !*** ./assets/wp.png ***!
+  \***********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony default export */ __webpack_exports__[\"default\"] = (__webpack_require__.p + \"47692505d122dbcae490be2492a60b2e.png\");\n\n//# sourceURL=webpack:///./assets/wp.png?");
+
+/***/ }),
+
 /***/ "./index.js":
 /*!******************!*\
   !*** ./index.js ***!
@@ -152,7 +164,7 @@ eval("module.exports = JSON.parse(\"{\\\"title\\\":\\\"New JSON title\\\"}\");\n
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Post__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Post */ \"./Post.js\");\n/* harmony import */ var _assets_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/json */ \"./assets/json.json\");\nvar _assets_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./assets/json */ \"./assets/json.json\", 1);\n/* harmony import */ var _styles_styles_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles/styles.css */ \"./styles/styles.css\");\n/* harmony import */ var _styles_styles_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_styles_styles_css__WEBPACK_IMPORTED_MODULE_2__);\n\r\n\r\n\r\nconst post = new _Post__WEBPACK_IMPORTED_MODULE_0__[\"default\"]('Webpack post title');\r\nconsole.log('Post to String', post.toString());\r\n\r\nconsole.log('JSON: ', _assets_json__WEBPACK_IMPORTED_MODULE_1__.title);\n\n//# sourceURL=webpack:///./index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _Post__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Post */ \"./Post.js\");\n/* harmony import */ var _assets_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/json */ \"./assets/json.json\");\nvar _assets_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./assets/json */ \"./assets/json.json\", 1);\n/* harmony import */ var _styles_styles_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles/styles.css */ \"./styles/styles.css\");\n/* harmony import */ var _styles_styles_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_styles_styles_css__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _assets_wp_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./assets/wp.png */ \"./assets/wp.png\");\n\r\n\r\n\r\n\r\nconst post = new _Post__WEBPACK_IMPORTED_MODULE_0__[\"default\"]('Webpack post title', _assets_wp_png__WEBPACK_IMPORTED_MODULE_3__[\"default\"]);\r\nconsole.log('Post to String', post.toString());\r\n\r\nconsole.log('JSON: ', _assets_json__WEBPACK_IMPORTED_MODULE_1__.title);\n\n//# sourceURL=webpack:///./index.js?");
 
 /***/ }),
 
