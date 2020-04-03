@@ -5,12 +5,12 @@ export default class Post {
         this.data = new Date();
     }
 
-    toString() {
+    toStr() {
         JSON.stringify({
             title: this.title,
             date: this.data.toJSON(),
             img: this.img
-        })
+        }, null, 2);
     }
 
     get upperCaseTitle() {

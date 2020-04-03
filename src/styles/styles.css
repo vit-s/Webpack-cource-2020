@@ -1,6 +1,9 @@
 @import "~normalize.css";
 @import "comfortaa.css";
 
+* {
+    font-family: 'Comfortaa', sans-serif;
+}
 .container {
     padding-top: 2rem;
     max-width: 1000px;
@@ -9,7 +12,6 @@
 
 h1 {
     text-align: center;
-    font-family: 'Comfortaa', sans-serif;
 }
 
 .logo {
@@ -18,4 +20,9 @@ h1 {
     height: 200px;
     width: 200px;
     margin: 0 auto;
+}
+
+.code {
+    font-family: Comfortaa, sans-serif;
+    color: red;
 }

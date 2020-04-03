@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     context: path.resolve(__dirname, 'src'),
@@ -20,11 +21,25 @@ module.exports = {
             '@': path.resolve(__dirname, 'src'),
         }
     },
+    optimization: {
+        splitChunks: {
+            chunks: "all"
+        }
+    },
+    devServer: {
+        port: 4200
+    },
     plugins: [
         new HtmlWebpackPlugin({
             template: './index.html'
         }),
         new CleanWebpackPlugin(),
+        new CopyWebpackPlugin([
+            {
+                from: path.resolve(__dirname, 'src/assets/favicon-32x32.png'),
+                to: path.resolve(__dirname, 'dist')
+            }
+        ])
     ],
     module: {
         rules: [
